@@ -25,5 +25,5 @@ if __name__ == "__main__":
     app.listen(8888)
 
     # IOLoop.current()：返回当前线程的IOLoop实例对象
-    # IOLoop.start()：启动IOLoop实例对象的I/O循环
+    # IOLoop.start()：启动IOLoop实例对象的I/O循环，同时开启了监听
     tornado.ioloop.IOLoop.current().start()
