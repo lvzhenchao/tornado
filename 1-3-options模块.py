@@ -44,3 +44,4 @@ if __name__ == "__main__":
 # options 基础方法和属性
 ## define()方法：定义变量
 ## parse_command_line()方法：解析命令行的参数，并保存到options
+## parse_config_file(path)方法：从配置文件导入参数
