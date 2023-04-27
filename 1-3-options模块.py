@@ -4,8 +4,8 @@ import tornado.httpserver
 from tornado import options
 
 # 定义两个参数
-tornado.options.define("port", default = 8899, type = int)
-tornado.options.define("list", default = [], type = str, multiple=True)
+tornado.options.define("port", default = 88990, type = int)
+tornado.options.define("list", default = [123,456], type = str, multiple=True)
 
 
 
