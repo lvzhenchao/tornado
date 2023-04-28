@@ -27,9 +27,9 @@ if __name__ == "__main__":
     print("port = ", tornado.options.options.port)
 
     # 3、获取一个配置文件的参数设置; 在解析和使用选项之前，您需要“define”选项
-    # tornado.options.parse_config_file("./config")
-    # print("list = ", tornado.options.options.list)
-    # print("port = ", tornado.options.options.port)
+    tornado.options.parse_config_file("./config")
+    print("list = ", tornado.options.options.list)
+    print("port = ", tornado.options.options.port)
 
     app = tornado.web.Application([
         (r"/", IndexHandler)
