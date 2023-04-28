@@ -22,12 +22,14 @@ class IndexHandler(tornado.web.RequestHandler):
 if __name__ == "__main__":
 
     # 2、转换命令行参数，并保存到tornado.options.options
-    tornado.options.parse_command_line() #在解析和使用选项之前，您需要“define”选项
-    print("list = ", tornado.options.options.list)
-    print("port = ", tornado.options.options.port)
+    # tornado.options.parse_command_line() #在解析和使用选项之前，您需要“define”选项
+    # print("list = ", tornado.options.options.list)
+    # print("port = ", tornado.options.options.port)
 
     # 3、获取一个配置文件的参数设置; 在解析和使用选项之前，您需要“define”选项
     tornado.options.parse_config_file("./config")
+    tornado.options.options.logging = None #关闭日志打印 200的状态码
+
     print("list = ", tornado.options.options.list)
     print("port = ", tornado.options.options.port)
 
