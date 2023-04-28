@@ -4,7 +4,7 @@ import tornado.httpserver
 from tornado import options
 
 # 1、自定义定义两个参数
-tornado.options.define("port", default = 88990, type = int)
+tornado.options.define("port", default = 8899, type = int)
 tornado.options.define("list", default = [123,456], type = str, multiple=True)
 
 
@@ -22,14 +22,14 @@ class IndexHandler(tornado.web.RequestHandler):
 if __name__ == "__main__":
 
     # 2、转换命令行参数，并保存到tornado.options.options
-    tornado.options.parse_command_line()
+    tornado.options.parse_command_line() #在解析和使用选项之前，您需要“define”选项
     print("list = ", tornado.options.options.list)
     print("port = ", tornado.options.options.port)
 
-    # 3、获取一个配置文件的参数设置
-    tornado.options.parse_config_file('config')
-    print("list = ", tornado.options.options.list)
-    print("port = ", tornado.options.options.port)
+    # 3、获取一个配置文件的参数设置; 在解析和使用选项之前，您需要“define”选项
+    # tornado.options.parse_config_file("./config")
+    # print("list = ", tornado.options.options.list)
+    # print("port = ", tornado.options.options.port)
 
     app = tornado.web.Application([
         (r"/", IndexHandler)
