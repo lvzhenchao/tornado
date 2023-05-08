@@ -7,7 +7,7 @@ import views
 if __name__ == "__main__":
 
     app = tornado.web.Application([
-        [r"/", views.IndexHandler]
+        (r"/", views.IndexHandler)
     ])
 
     # 手动创建一个http服务器对象，这种更直观看到创建服务器了
