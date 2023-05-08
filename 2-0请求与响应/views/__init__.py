@@ -1,2 +1,0 @@
-class IndexHandler:
-    pass
