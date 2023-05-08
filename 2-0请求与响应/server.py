@@ -10,12 +10,10 @@ class IndexHandler(tornado.web.RequestHandler):
     def get(self, *args, **kwargs):
         # 对应http请求的方法
         # 给浏览器响应信息
-        self.write("lzc is a good man")
+        self.write("lzc is a good man 哈哈哈")
 
 
 if __name__ == "__main__":
-
-    print("list = ", options['list'])
 
     app = tornado.web.Application([
         (r"/", IndexHandler)
