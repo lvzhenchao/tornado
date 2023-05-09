@@ -8,4 +8,4 @@ class IndexHandler(RequestHandler):
     def get(self, *args, **kwargs):
         # 对应http请求的方法
         # 给浏览器响应信息
-        self.write("lzc is a good man 哈哈哈")
+        self.write("lzc is a good man 呕呕呕")
