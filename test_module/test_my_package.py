@@ -18,6 +18,7 @@ print(sys.path)
 
 # 4) 使用__init__.py来导入,并且在里面添加相应的设置：目前导入不成功
 import my_package
+
 my_package.module1.display(555)
 
 clangs = my_package.CLanguage()
