@@ -7,6 +7,7 @@ from config import options
 import views
 # import views.index
 # from views import index
+# from views.index import IndexHandler
 
 if __name__ == "__main__":
 
@@ -16,6 +17,9 @@ if __name__ == "__main__":
 
         # import views.index
         # (r"/", views.index.IndexHandler)
+
+        # from views.index import IndexHandler
+        # (r"/", IndexHandler)
 
         # import view
         (r"/", views.index.IndexHandler)
