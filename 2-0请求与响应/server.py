@@ -2,11 +2,18 @@ import tornado.web # 基础web框架模块
 import tornado.ioloop # 核心IO循环模块， 封装了Linux的epoll和BSD的kqueue,是框架高效的基础
 import tornado.httpserver
 from config import options
+
+# 下面两种写法都可以
 import views.index
+# from views import index
 
 if __name__ == "__main__":
 
     app = tornado.web.Application([
+        # from views import index
+        # (r"/", index.IndexHandler)
+
+        # import views.index
         (r"/", views.index.IndexHandler)
     ])
 
