@@ -4,3 +4,8 @@
 options = {
     "port":8081,
 }
+
+# 配置
+settings = {
+    "debug" : True
+}
