@@ -2,7 +2,7 @@
 http://c.biancheng.net/
 创建第一个 Python 包
 '''
-print('http://c.biancheng.net/python/')
+print('我是init文件哦')
 
 # 第 1 种方式用于导入当前包（模块）中的指定模块：from . import 模块名
 from . import module1
