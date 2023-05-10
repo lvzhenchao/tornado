@@ -4,7 +4,8 @@ import tornado.httpserver
 from config import options
 
 # 下面两种写法都可以
-import views.index
+import views
+# import views.index
 # from views import index
 
 if __name__ == "__main__":
@@ -14,6 +15,9 @@ if __name__ == "__main__":
         # (r"/", index.IndexHandler)
 
         # import views.index
+        # (r"/", views.index.IndexHandler)
+
+        # import view
         (r"/", views.index.IndexHandler)
     ])
 
