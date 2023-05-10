@@ -17,7 +17,8 @@ if __name__ == "__main__":
     #     # (r"/", IndexHandler)
     #
     #     # import view
-        (r"/", views.index.IndexHandler)
+        (r"/", views.index.IndexHandler),
+        (r"/home", views.index.HomeHandler)
     ])
 
     # 手动创建一个http服务器对象，这种更直观看到创建服务器了
