@@ -6,21 +6,6 @@ from application import Application
 
 if __name__ == "__main__":
 
-    # app = tornado.web.Application([
-    #     # from views import index
-    #     # (r"/", index.IndexHandler)
-    #
-    #     # import views.index
-    #     # (r"/", views.index.IndexHandler)
-    #
-    #     # from views.index import IndexHandler
-    #     # (r"/", IndexHandler)
-    #
-    #     # import view
-    #     (r"/", views.index.IndexHandler),
-    #     (r"/home", views.index.HomeHandler)
-    # ])
-
     app = Application()
     # 手动创建一个http服务器对象，这种更直观看到创建服务器了
     httpServer = tornado.httpserver.HTTPServer(app)

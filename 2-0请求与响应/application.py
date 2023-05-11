@@ -1,14 +1,9 @@
 import config
-
 import tornado.web
+from views import index
 
-# 下面两种写法都可以
-import views
-# import views.index
-# from views import index
-# from views.index import IndexHandler
 class Application(tornado.web.Application):
-    def __int__(self):
+    def __init__(self):
         handlers = [
             # app = tornado.web.Application([
             # from views import index
@@ -21,8 +16,8 @@ class Application(tornado.web.Application):
             # (r"/", IndexHandler)
 
             # import view
-            (r"/", views.index.IndexHandler),
-            (r"/home", views.index.HomeHandler)
+            (r"/", index.IndexHandler),
+            (r"/home", index.HomeHandler)
         ]
 
         super(Application, self).__init__(handlers, **config.settings)
