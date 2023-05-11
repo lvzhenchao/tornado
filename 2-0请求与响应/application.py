@@ -21,7 +21,8 @@ class Application(tornado.web.Application):
             # (r"/", IndexHandler)
 
             # import view
-            (r"/", views.index.IndexHandler)
+            (r"/", views.index.IndexHandler),
+            (r"/home", views.index.HomeHandler)
         ]
 
         super(Application, self).__init__(handlers, **config.settings)
