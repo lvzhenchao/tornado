@@ -9,4 +9,8 @@ class Application(tornado.web.Application):
             (r"/home", index.HomeHandler)
         ]
 
-        super(Application, self).__init__(handlers, **config.settings)
+        # Python 2.x 中的写法
+        # super(Application, self).__init__(handlers, **config.settings)
+
+        # Python 3.x 中的写法
+        super().__init__(handlers, **config.settings)
