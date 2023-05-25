@@ -10,7 +10,7 @@ options = {
 
 # 配置
 settings = {
-    "debug" : True,
     "static_path": os.path.join(BASE_DIRS, "static"),
     "template_path": os.path.join(BASE_DIRS, "temlpates"),
+    "debug": True,
 }
