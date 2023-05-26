@@ -1,23 +1,10 @@
-class People:
-    def __init__(self,name):
-        self.name = name
-    def say(self):
-        print("我是人，名字为：",self.name)
-class Animal:
-    def __init__(self,food):
-        self.food = food
-    def display(self):
-        print("我是动物,我吃",self.food)
-#People中的 name 属性和 say() 会遮蔽 Animal 类中的
-class Person(People, Animal):
-    #自定义构造方法
-    def __init__(self,name,food):
-        #调用 People 类的构造方法
-        super().__init__(name)
-        #super(Person,self).__init__(name) #执行效果和上一行相同
-        #People.__init__(self,name)#使用未绑定方法调用 People 类构造方法
-        #调用其它父类的构造方法，需手动给 self 传值
-        Animal.__init__(self,food)
-per = Person("zhangsan","熟食")
-per.say()
-per.display()
+a = {'one': 1, 'two': 2, 'three': [1,2,3]}
+b = a.copy()
+#向 a 中添加新键值对，由于b已经提前将 a 所有键值对都深拷贝过来，因此 a 添加新键值对，不会影响 b。
+a['four']=100
+print(a)
+print(b)
+#由于 b 和 a 共享[1,2,3]（浅拷贝），因此移除 a 中列表中的元素，也会影响 b。
+a['three'].remove(1)
+print(a)
+print(b)
