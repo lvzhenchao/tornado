@@ -12,7 +12,7 @@ options = {
 settings = {
     "static_path": os.path.join(BASE_DIRS, "static"),
     "template_path": os.path.join(BASE_DIRS, "temlpates"),
-    "autoreload": True, # 只需要自动重启
+    "autoreload": True, # 只需要自动重启，就使用这个参数
     # "debug": True,
     # 设置tornado是否工作在调试模式下，默认为false即工作在生产下；
     # True：自动重启，监控源码是否有变动，判断是否重启服务器，减少手动重启，提高开发效率；autoreload = True
