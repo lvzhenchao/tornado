@@ -17,3 +17,15 @@ class HomeHandler(RequestHandler):
         # 对应http请求的方法
         # 给浏览器响应信息
         self.write("home is ok")
+
+class SunckHandler(RequestHandler):
+    #该方法会在HTTP方法之前调用
+    def initialize(self, word1, word2):
+        self.word1 = word1
+        self.word2 = word2
+
+    def get(self, *args, **kwargs):
+        # 对应http请求的方法
+        # 给浏览器响应信息
+        print(self.word1, self.word2)
+        self.write("lzc is a good man")
