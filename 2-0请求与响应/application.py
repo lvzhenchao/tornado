@@ -6,7 +6,8 @@ class Application(tornado.web.Application):
     def __init__(self):
         handlers = [
             (r"/", index.IndexHandler),
-            (r"/home", index.HomeHandler)
+            (r"/home", index.HomeHandler),
+            (r"/sunck", index.SunckHandler, {'word1': "good", "word2": "nice"})
         ]
 
         # Python 2.x 中的写法
