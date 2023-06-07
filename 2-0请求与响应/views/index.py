@@ -21,6 +21,7 @@ class HomeHandler(RequestHandler):
 class SunckHandler(RequestHandler):
     #该方法会在HTTP方法之前调用
     def initialize(self, word1, word2):
+        # 接收参数
         self.word1 = word1
         self.word2 = word2
 
