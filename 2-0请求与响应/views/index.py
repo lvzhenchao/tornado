@@ -45,3 +45,14 @@ class Json1Handler(RequestHandler):
         # 将字典转换成json字符串
         jsonStr = json.dumps(per)
         self.write(jsonStr)
+
+class Json2Handler(RequestHandler):
+    def get (self, *args, **kwargs):
+        per = {
+            "name": "sunk",
+            "age": 18,
+            "height": 178,
+            "weight": 70
+        }
+
+        self.write(per)
