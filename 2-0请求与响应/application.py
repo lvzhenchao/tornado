@@ -7,7 +7,9 @@ class Application(tornado.web.Application):
         handlers = [
             (r"/", index.IndexHandler),
             (r"/home", index.HomeHandler),
-            (r"/sunck", index.SunckHandler, {'word1': "good", "word2": "nice"})
+            (r"/sunck", index.SunckHandler, {'word1': "good", "word2": "nice"}),
+
+            (r"/json1", index.Json1Handler)
         ]
 
         # Python 2.x 中的写法

@@ -1,3 +1,5 @@
+import json
+
 import tornado.web
 from tornado.web import RequestHandler
 
@@ -30,3 +32,16 @@ class SunckHandler(RequestHandler):
         # 给浏览器响应信息
         print(self.word1, self.word2)
         self.write("lzc is a good man")
+
+class Json1Handler(RequestHandler):
+    def get (self, *args, **kwargs):
+        per = {
+            "name": "sunk",
+            "age": 18,
+            "height": 178,
+            "weight": 70
+        }
+
+        # 将字典转换成json字符串
+        jsonStr = json.dumps(per)
+        self.write(jsonStr)
