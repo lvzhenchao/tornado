@@ -43,6 +43,7 @@ class Json1Handler(RequestHandler):
         }
 
         # 将字典转换成json字符串
+        # 浏览器返回信息：Content-Type:text/html; charset=UTF-8
         jsonStr = json.dumps(per)
         self.write(jsonStr)
 
@@ -55,5 +56,6 @@ class Json2Handler(RequestHandler):
             "weight": 70
         }
 
-        # write方法返回的直接是json
+        # write方法返回的直接是字典，
+        # 浏览器返回信息显示：Content-Type:application/json; charset=UTF-8
         self.write(per)
