@@ -55,4 +55,5 @@ class Json2Handler(RequestHandler):
             "weight": 70
         }
 
+        # write方法返回的直接是json
         self.write(per)
