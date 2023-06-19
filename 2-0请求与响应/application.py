@@ -11,6 +11,8 @@ class Application(tornado.web.Application):
 
             (r"/json1", index.Json1Handler),
             (r"/json2", index.Json2Handler),
+
+            (r"/header", index.HeaderHandler),
         ]
 
         # Python 2.x 中的写法

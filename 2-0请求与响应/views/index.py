@@ -63,3 +63,18 @@ class Json2Handler(RequestHandler):
         # write方法返回的直接是字典，
         # 浏览器返回信息显示：Content-Type:application/json; charset=UTF-8
         self.write(per)
+
+class HeaderHandler(RequestHandler):
+
+    # 在http响应处理方法之前被调用，可以重写该方法来预先设置默认的headers；
+    # 默认方法
+    def set_default_headers(self):
+        self.set_header("Content-Type", "text/html; charset=UTF-8")
+    def get (self, *args, **kwargs):
+        pass
+
+    def post(self, *args, **kwargs):
+        pass
+
+
+
