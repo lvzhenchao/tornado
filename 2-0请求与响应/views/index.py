@@ -46,7 +46,7 @@ class Json1Handler(RequestHandler):
         # 浏览器返回信息：Content-Type:text/html; charset=UTF-8
         jsonStr = json.dumps(per)
 
-        # 手动设置改变返回格式
+        # 手动设置改变返回格式，改变响应头
         self.set_header("Content-Type", "application/json; charset=UTF-8")
         self.set_header("lzc", "good man")
         self.write(jsonStr)
