@@ -70,8 +70,10 @@ class HeaderHandler(RequestHandler):
     # 默认方法
     def set_default_headers(self):
         self.set_header("Content-Type", "text/html; charset=UTF-8")
+        self.set_header("lzc", "1")
     def get (self, *args, **kwargs):
-        pass
+        self.set_header("lzc", "2")
+        self.write("good nice")
 
     def post(self, *args, **kwargs):
         pass
