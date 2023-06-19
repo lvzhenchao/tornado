@@ -9,10 +9,15 @@ class Application(tornado.web.Application):
             (r"/home", index.HomeHandler),
             (r"/sunck", index.SunckHandler, {'word1': "good", "word2": "nice"}),
 
+            # json
             (r"/json1", index.Json1Handler),
             (r"/json2", index.Json2Handler),
 
+            # header
             (r"/header", index.HeaderHandler),
+
+            # 状态码
+            (r"/status", index.StatusHandler),
         ]
 
         # Python 2.x 中的写法

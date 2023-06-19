@@ -78,5 +78,13 @@ class HeaderHandler(RequestHandler):
     def post(self, *args, **kwargs):
         pass
 
+class StatusHandler(RequestHandler):
+    def get (self, *args, **kwargs):
+        self.set_status(404, "没遭到") #必须是正常的code码，reason值才可以正常显示
+        self.write("#########")
+
+    def post(self, *args, **kwargs):
+        pass
+
 
 
