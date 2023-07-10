@@ -86,5 +86,10 @@ class StatusHandler(RequestHandler):
     def post(self, *args, **kwargs):
         pass
 
+class RedirectHandler(RequestHandler):
+    def get (self, *args, **kwargs):
+        self.redirect("/")
+
+
 
 

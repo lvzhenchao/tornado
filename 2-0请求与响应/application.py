@@ -18,6 +18,10 @@ class Application(tornado.web.Application):
 
             # 状态码
             (r"/status", index.StatusHandler),
+
+            # 重定向
+            (r"/redirect", index.RedirectHandler),
+
         ]
 
         # Python 2.x 中的写法
