@@ -23,5 +23,5 @@ class Application(tornado.web.Application):
         # Python 2.x 中的写法
         # super(Application, self).__init__(handlers, **config.settings)
 
-        # Python 3.x 中的写法
+        # Python 3.x 中的写法,重写父类的初始化方法
         super().__init__(handlers, **config.settings)
