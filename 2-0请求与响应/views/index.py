@@ -90,6 +90,33 @@ class RedirectHandler(RequestHandler):
     def get (self, *args, **kwargs):
         self.redirect("/")
 
+class ErrorHandler(RequestHandler):
+
+    # 用来处理send_error抛出的错误信息，并返回给浏览器错误界面
+    def write_error(self, status_code, **kwargs):
+        if status_code == 500:
+            code = 500
+            self.write("服务器颞部错误")
+        elif status_code == 404:
+            code = 404
+            self.write("资源不存在")
+        else:
+            code = 999
+            self.write("不知道啥错误")
+
+        self.set_status(code)
+
+    def get (self, *args, **kwargs):
+        flag = self.get_query_argument("flag")
+        print(type(flag))
+        if flag == "0":
+            # send_error抛出错误状态码，默认为500，抛出后会调用write_error方法进行处理
+            # 在send_error之后就不要在响应输出了
+            self.send_error(500)
+
+        self.write("You are Right")
+
+
 
 
 

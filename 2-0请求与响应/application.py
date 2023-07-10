@@ -22,6 +22,10 @@ class Application(tornado.web.Application):
             # 重定向
             (r"/redirect", index.RedirectHandler),
 
+            # 错误处理
+            # iserror?flag=2
+            (r"/error", index.ErrorHandler),
+
         ]
 
         # Python 2.x 中的写法
