@@ -10,7 +10,10 @@ class IndexHandler(RequestHandler):
     def get(self, *args, **kwargs):
         # 对应http请求的方法
         # 给浏览器响应信息
-        self.write("lzc is a good man 呕呕呕")
+        # self.write("lzc is a good man 呕呕呕")
+        url = self.reverse_url("kaigeGood")
+        # print(url)
+        self.write("<a href='%s' > 去另一个界面 </a>"%(url))
 
 class HomeHandler(RequestHandler):
 
