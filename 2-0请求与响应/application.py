@@ -26,7 +26,7 @@ class Application(tornado.web.Application):
             # iserror?flag=2
             (r"/error", index.ErrorHandler),
 
-            # 反向代理
+            # 反向代理；bu能使用上面的元组路由；
             tornado.web.url(r'/kaige', index.KaigeHandler, {"word3": "lzc456","word4": "lzc789"}, name="kaigeGood"),
 
         ]
