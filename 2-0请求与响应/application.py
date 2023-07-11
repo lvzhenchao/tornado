@@ -26,6 +26,9 @@ class Application(tornado.web.Application):
             # iserror?flag=2
             (r"/error", index.ErrorHandler),
 
+            # 反向
+            tornado.web.url(r'/kaige', index.KaigeHandler, {"word3": "lzc456","word4": "lzc789"}, name="index"),
+
         ]
 
         # Python 2.x 中的写法

@@ -116,6 +116,14 @@ class ErrorHandler(RequestHandler):
 
         self.write("You are Right")
 
+class KaigeHandler(RequestHandler):
+
+    def initialize(self, word3, word4):
+        self.word3 = word3
+        self.word4 = word4
+    def get (self, *args, **kwargs):
+        print(self.word3, self.word4)
+        self.write("lzc is good man")
 
 
 
