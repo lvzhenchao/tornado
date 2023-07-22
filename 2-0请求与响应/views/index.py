@@ -12,7 +12,7 @@ class IndexHandler(RequestHandler):
         # 给浏览器响应信息
         # self.write("lzc is a good man 呕呕呕")
         url = self.reverse_url("kaigeGood")
-        # print(url)
+        # print(url)  返现代理跳转
         self.write("<a href='%s' > 去另一个界面 </a>"%(url))
 
 class HomeHandler(RequestHandler):
