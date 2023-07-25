@@ -29,6 +29,8 @@ class Application(tornado.web.Application):
             # 反向代理；不能使用上面的元组路由；
             tornado.web.url(r'/kaige', index.KaigeHandler, {"word3": "lzc456","word4": "lzc789"}, name="kaigeGood"),
 
+            # 正则url
+            (r"/liuyifei/(\w+)/(\w+)/(\w+)", index.LiuyifeiHandler),
         ]
 
         # Python 2.x 中的写法

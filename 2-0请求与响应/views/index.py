@@ -128,6 +128,12 @@ class KaigeHandler(RequestHandler):
         print(self.word3, self.word4)
         self.write("lzc is good man")
 
+class LiuyifeiHandler(RequestHandler):
+    def get (self,h1,h2,h3, *args, **kwargs):
+
+        print(h1+"-"+h2+"-"+h3)
+        self.write("lzc is good man")
+
 
 
 
